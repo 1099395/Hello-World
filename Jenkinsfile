@@ -8,4 +8,8 @@ node {
      bat "cd C:\\Drishya\\Hello-World-master\\Sample && ${mvnHome}/bin/mvn clean package"
      bat "echo code is builded"
    }
+  stage ("Build image") {
+   bat "cd C:/Drishya/Hello-World-master/Sample &&  ${mvnHome}/bin/mvn docker:build"
+    bat "echo XXXXXXXXXX"
+  }
    }
