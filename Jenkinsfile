@@ -8,9 +8,9 @@ node {
      bat "cd ${workspace}\\Sample && ${mvnHome}/bin/mvn clean package"
      bat "echo code is builded"
    }
-    stage ("Build image") {
-   bat "cd ${workspace}\\Sample && ${mvnHome}/bin/mvn docker:build"
-    bat "echo XXXXXXXXXX"
+    stage ("Build image"){
+    bat "cd ${workspace} && docker_build.bat ${mvnHome}"
+    bat "echo image is builded"
   }
 
    }
