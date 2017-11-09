@@ -9,7 +9,7 @@ node {
      bat "echo code is builded"
    }
   stage ("Build image") {
-   bat "cd C:\\Users\\1197316\\Downloads\\Sample\\Sample &&  ${dockerHome}/mvn docker:build"
+   bat "cd C:\\Users\\1197316\\Downloads\\Sample\\Sample &&  ${mvnHome}/bin/mvn docker:build"
     bat "echo XXXXXXXXXX"
   }
    }
