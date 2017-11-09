@@ -1,15 +1,12 @@
 node {
   def mvnHome = tool 'maven3'
   def dockerHome = 'C:/docker'
-  stage ("Intial Preparation") {
-    bat "echo Preparations are done"
+ stage ("Intial Preparation") {
+    git credentialsId: 'github-creds', url: 'https://github.com/1099395/Hello-world'
   }
    stage ("Build Code") {
-     bat "cd C:\\Users\\1197316\\Downloads\\Sample\\Sample && ${mvnHome}/bin/mvn clean package"
+     bat "cd ${workspace}\\Sample && ${mvnHome}/bin/mvn clean package"
      bat "echo code is builded"
    }
-  stage ("Build image") {
-   bat "cd C:\\Users\\1197316\\Downloads\\Sample\\Sample && ${mvnHome}/bin/mvn docker:build"
-    bat "echo XXXXXXXXXX"
-  }
+
    }
