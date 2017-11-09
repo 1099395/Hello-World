@@ -5,11 +5,11 @@ node {
     bat "echo Preparations are done"
   }
    stage ("Build Code") {
-     bat "cd C:\\Drishya\\Hello-World-master\\Sample && ${mvnHome}/bin/mvn clean package"
+     bat "cd C:\\Users\\1197316\\Downloads\\Sample\\Sample && ${mvnHome}/bin/mvn clean package"
      bat "echo code is builded"
    }
   stage ("Build image") {
-   bat "cd C:/Drishya/Hello-World-master/Sample &&  ${mvnHome}/bin/mvn docker:build"
+   bat "cd C:\\Users\\1197316\\Downloads\\Sample\\Sample &&  ${mvnHome}/bin/mvn docker:build"
     bat "echo XXXXXXXXXX"
   }
    }
